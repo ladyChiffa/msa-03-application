@@ -2,9 +2,12 @@ package com.example.msa_03_application.controller;
 
 import com.example.msa_03_application.dto.CreditApplicationRequest;
 import com.example.msa_03_application.dto.CreditApplicationResponse;
+import com.example.msa_03_application.model.CreditApplication;
 import com.example.msa_03_application.service.CreditApplicationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/credit-applications")
@@ -19,22 +22,13 @@ public class CreditApplicationController {
         System.out.println("IN CONTROLLER " + id);
         return new CreditApplicationResponse(id);
     }
-/*
     @GetMapping("/{id}/status")
-    public ApplicationStatus getApplicationStatus(@PathVariable Long id){
+    public boolean getApplicationStatus(@PathVariable Long id){
         return service.getApplicationStatus(id);
     }
 
     @GetMapping
-    public List<CreditApplicationListResponse> getAllApplications(){
+    public List<CreditApplication> getAllApplications(){
         return service.getAllApplications();
     }
-*/
-/*
-    @GetMapping("/new")
-    public String createApplication() {
-        service.createApplication();
-        return "ok";
-    }
-*/
 }

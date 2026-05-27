@@ -14,4 +14,5 @@ public class CreditApplication {
     private Integer income;
     private Integer currentCreditLoad;
     private Integer creditRating;
+    private Boolean status;
 }
