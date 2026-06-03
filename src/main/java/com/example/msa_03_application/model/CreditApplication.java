@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreditApplication {
-    private Long id;
+    private Integer id;
     private Integer amount;
     private String term;
     private Integer income;

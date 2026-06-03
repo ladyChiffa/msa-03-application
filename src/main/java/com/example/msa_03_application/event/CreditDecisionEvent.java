@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreditDecisionEvent {
-    private Long id;
+    private Integer id;
     boolean approved;
 }

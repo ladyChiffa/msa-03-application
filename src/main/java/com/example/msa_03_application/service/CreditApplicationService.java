@@ -23,9 +23,9 @@ public class CreditApplicationService {
     private final CreditApplicationRepository repository;
     private final KafkaTemplate<String, CreditApplicationEvent> kafkaTemplate;
 
-    public Long createApplication(CreditApplicationRequest request) {
+    public Integer createApplication(CreditApplicationRequest request) {
         CreditApplication application = new CreditApplication();
-        application.setId(102L);
+        // application.setId(102L);
         BeanUtils.copyProperties(request, application);
         application = repository.save(application);
 
@@ -43,7 +43,7 @@ public class CreditApplicationService {
         return application.getId();
     }
 
-    public boolean getApplicationStatus(Long id) {
+    public boolean getApplicationStatus(Integer id) {
         return repository.findById(id)
                 .map(CreditApplication::getStatus)
                 .orElseThrow(() -> new RuntimeException("Not found id=" + id ));

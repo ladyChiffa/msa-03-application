@@ -23,7 +23,7 @@ public class CreditApplicationRepository {
         return repo;
     }
 
-    public Optional<CreditApplication> findById(Long id) {
+    public Optional<CreditApplication> findById(Integer id) {
         for (CreditApplication app : repo) {
             if(app.getId() == id) {
                 return Optional.of(app);

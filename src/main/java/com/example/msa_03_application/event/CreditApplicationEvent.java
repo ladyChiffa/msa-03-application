@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreditApplicationEvent {
-    private Long id;
+    private Integer id;
     private Integer amount;
     private String term;
     private Integer income;

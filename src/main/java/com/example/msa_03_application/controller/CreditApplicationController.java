@@ -18,12 +18,12 @@ public class CreditApplicationController {
     @PostMapping
     public CreditApplicationResponse createApplication(@RequestBody CreditApplicationRequest request) {
         System.out.println("IN CONTROLLER " + request);
-        long id = service.createApplication(request);
+        int id = service.createApplication(request);
         System.out.println("IN CONTROLLER " + id);
         return new CreditApplicationResponse(id);
     }
     @GetMapping("/{id}/status")
-    public boolean getApplicationStatus(@PathVariable Long id){
+    public boolean getApplicationStatus(@PathVariable Integer id){
         return service.getApplicationStatus(id);
     }
 
